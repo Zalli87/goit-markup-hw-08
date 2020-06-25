@@ -1,20 +1,38 @@
 .client-list {
-  display: flex;
-  & .item:not(:last-child) {
-    margin-right: 30px;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    flex-wrap: wrap;
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
 }
 
 .client-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @media screen and (min-width: 480px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 210px;
+    height: 90px;
+  }
 
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 90px;
+  }
   transition: color 250ms $transition-timing-function,
     border 250ms $transition-timing-function;
-
-  width: 170px;
-  height: 90px;
 
   border: 1px solid #afb1b8;
   border-radius: 4px;
