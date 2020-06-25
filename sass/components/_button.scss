@@ -1,0 +1,90 @@
+%button {
+  min-width: 200px;
+
+  cursor: pointer;
+
+  color: $white-color;
+  background-color: $accent-color;
+
+  transition: background-color 250ms $transition-timing-function;
+
+  border-color: transparent;
+  border-radius: 4px;
+  padding: 10px 32px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-decoration: none;
+}
+
+.close-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateX(-8px) translateY(8px);
+
+  cursor: pointer;
+
+  width: 30px;
+  height: 30px;
+
+  background-color: $white-color;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  color: $prime-text-color;
+}
+.close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition: fill 250ms $transition-timing-function;
+
+  fill: currentColor;
+
+  .close-button:hover & {
+    fill: $accent-color;
+  }
+}
+
+.modal-button {
+  @extend %button;
+  display: block;
+
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+}
+
+.subscribe-button {
+  @extend %button;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 12px;
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+  }
+  &::after {
+    background-image: url(../images/icon-send.png);
+    margin-left: 10px;
+    content: "";
+    width: 24px;
+    height: 24px;
+  }
+}
