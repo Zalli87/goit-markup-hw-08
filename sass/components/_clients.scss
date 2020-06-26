@@ -2,10 +2,18 @@
   @media screen and (min-width: 480px) {
     display: flex;
     flex-wrap: wrap;
-    & .item:not(:last-child) {
+    & .item {
+      margin-bottom: 30px;
+    }
+
+    & .item:nth-child(2n + 1) {
       margin-right: 30px;
     }
+    & .item:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
   }
+
   @media screen and (min-width: 1200px) {
     display: flex;
     & .item:not(:last-child) {

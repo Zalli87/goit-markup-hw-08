@@ -274,6 +274,16 @@ ul {
   }
 }
 
+.projects-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.projects-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .projects-list img {
   display: block;
 }
@@ -387,8 +397,14 @@ ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .client-list .item:not(:last-child) {
+  .client-list .item {
+    margin-bottom: 30px;
+  }
+  .client-list .item:nth-child(2n + 1) {
     margin-right: 30px;
+  }
+  .client-list .item:nth-last-child(-n + 2) {
+    margin-bottom: 0;
   }
 }
 
@@ -614,7 +630,8 @@ ul {
 
 .page-footer {
   background-color: #2f303a;
-  padding-top: 48px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .footer-logo {
@@ -639,6 +656,13 @@ address {
   line-height: 1.71;
 }
 
+@media screen and (min-width: 480px) {
+  address {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
 .address {
   margin-top: 0;
   margin-bottom: 9px;
@@ -654,13 +678,27 @@ address {
 .tel {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 0;
-  margin-bottom: 28px;
+}
+
+@media screen and (min-width: 480px) {
+  .join-us {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 
 .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (min-width: 480px) {
+  .footer-social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .footer-social .item:not(:last-child) {
@@ -705,7 +743,15 @@ address {
   text-transform: uppercase;
 }
 
+@media screen and (min-width: 480px) {
+  .subscribe-form {
+    text-align: center;
+  }
+}
+
 .subscribe-input {
+  margin-bottom: 20px;
+  width: 450px;
   outline: none;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);

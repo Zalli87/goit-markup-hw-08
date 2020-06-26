@@ -5,7 +5,8 @@
 }
 .page-footer {
   background-color: #2f303a;
-  padding-top: 48px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 .footer-logo {
   display: inline-block;
@@ -27,6 +28,10 @@ address {
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+  @media screen and (min-width: 480px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
 }
 .address {
   margin-top: 0;
@@ -41,11 +46,18 @@ address {
 .tel {
   color: rgba(255, 255, 255, 0.6);
   margin-top: 0;
-  margin-bottom: 28px;
 }
-
+.join-us {
+  @media screen and (min-width: 480px) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
 .footer-social {
   display: flex;
+  @media screen and (min-width: 480px) {
+    justify-content: center;
+  }
   .item:not(:last-child) {
     margin-right: 10px;
   }
@@ -82,8 +94,14 @@ address {
   text-transform: uppercase;
 }
 
+.subscribe-form {
+  @media screen and (min-width: 480px) {
+    text-align: center;
+  }
+}
 .subscribe-input {
-  // width: 358px;
+  margin-bottom: 20px;
+  width: 450px;
   outline: none;
 
   padding: 15px 16px;
