@@ -4,8 +4,11 @@
 
 /* main-nav */
 .main-nav {
-  // display: flex;
-  // align-items: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
   .logo {
     color: $prime-text-color;
@@ -20,6 +23,16 @@
     }
   }
 }
+.mobile-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 300px;
+  background-color: $white-color;
+  border-top: 1px solid #ececec;
+}
 
 /* site-nav */
 .site-nav {
@@ -30,7 +43,7 @@
     // margin-right: 50px;
   }
   & .link {
-    display: block;
+    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -56,7 +69,7 @@
 .current::after {
   display: block;
 
-  transform: translateY(32px);
+  margin-top: 8px;
 
   content: "";
   background-color: $accent-color;
@@ -67,9 +80,10 @@
 }
 
 .contact {
-  // display: flex;
-  // margin-left: auto;
-  // align-items: baseline;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   & .item:not(:last-child) {
     // margin-right: 30px;
