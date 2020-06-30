@@ -1,18 +1,17 @@
-.team {
+.team-list {
   background-color: #f5f4fa;
   & .item {
     background-color: $white-color;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
   }
-  & img {
-    display: block;
-  }
 }
 .team-list {
-  // display: flex;
-  & .item:not(:last-child) {
-    // margin-right: 30px;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    & .item:not(:last-child) {
+      margin-right: 30px;
+    }
   }
   & .title {
     margin-top: 30px;

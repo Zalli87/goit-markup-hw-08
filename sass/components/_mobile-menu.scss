@@ -1,3 +1,30 @@
+.menu-container {
+  background-color: $white-color;
+  z-index: 999;
+
+  &.is-open {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    width: 100%;
+    border-top: 1px solid #ececec;
+  }
+}
 .menu-button {
   display: inline-flex;
   margin: 0;
@@ -5,6 +32,9 @@
   padding: 0;
   border: none;
   background: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-button .icon-menu-close {
@@ -16,4 +46,13 @@
 }
 .menu-button.is-open .icon-menu {
   display: none;
+}
+
+.menu-button:hover,
+.menu-button:focus .icon-menu {
+  fill: $accent-color;
+}
+.menu-button:hover,
+.menu-button:focus .icon-menu-close {
+  fill: $accent-color;
 }
