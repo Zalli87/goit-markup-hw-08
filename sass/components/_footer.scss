@@ -117,10 +117,10 @@ address {
   }
 }
 .subscribe-input {
-  margin-bottom: 20px;
-  width: 450px;
+  display: block;
+  width: 100%;
   outline: none;
-
+  margin-bottom: 20px;
   padding: 15px 16px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -134,9 +134,8 @@ address {
   font-size: 16px;
   line-height: 1.25;
   color: rgba(255, 255, 255, 0.6);
-  @media screen and (max-width: 767px) {
-    display: block;
-    width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 450px;
   }
   @media screen and (min-width: 1200px) {
     width: 358px;

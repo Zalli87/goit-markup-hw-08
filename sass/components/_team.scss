@@ -1,12 +1,27 @@
-.team-list {
+.team {
   background-color: #f5f4fa;
+}
+.team-list {
   & .item {
     background-color: $white-color;
     box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 1px 3px rgba(0, 0, 0, 0.12);
   }
-}
-.team-list {
+  @media screen and (max-width: 767px) {
+    & .item:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    & .item:nth-child(2n + 1) {
+      margin-right: 30px;
+    }
+    & .item:nth-child(-n + 2) {
+      margin-bottom: 30px;
+    }
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     & .item:not(:last-child) {
