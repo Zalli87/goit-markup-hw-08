@@ -1,6 +1,5 @@
 .menu-container {
   background-color: $white-color;
-  z-index: 999;
 
   &.is-open {
     display: block;
@@ -19,6 +18,7 @@
     position: absolute;
     top: 100%;
     left: 0;
+    z-index: 2;
     padding-top: 60px;
     padding-bottom: 60px;
     width: 100%;

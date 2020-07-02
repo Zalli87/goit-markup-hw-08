@@ -11,6 +11,10 @@
   transition: opacity 250ms $transition-timing-function;
 
   background-color: rgba(0, 0, 0, 0.2);
+  @media screen and (min-width: 480px) and (max-width: 1199px) {
+    padding: 93px 15px;
+    overflow-y: scroll;
+  }
 }
 .backdrop.is-hidden {
   opacity: 0;
@@ -20,13 +24,13 @@
   transform: translate(-50%, -50%) scale(0.8);
 }
 .modal {
-  position: absolute;
+  position: relative;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $transition-timing-function;
-  width: 528px;
-  height: 581px;
+  max-width: 450px;
+  height: 609px;
 
   padding: 40px;
 
@@ -34,6 +38,11 @@
   border-radius: 4px;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
+  @media screen and (min-width: 1200px) {
+    position: absolute;
+    width: 450px;
+    height: 609px;
+  }
 }
 .feedback {
   margin-right: auto;
@@ -177,8 +186,8 @@
 .policy-text {
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   color: $second-text-color;
 }
