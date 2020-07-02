@@ -68,10 +68,8 @@ ul {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .page-header {
-    border-bottom: 1px solid #ececec;
-  }
+.page-header {
+  border-bottom: 1px solid #ececec;
 }
 
 /* main-nav */
