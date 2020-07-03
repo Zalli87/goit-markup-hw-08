@@ -11,7 +11,7 @@
   transition: opacity 250ms $transition-timing-function;
 
   background-color: rgba(0, 0, 0, 0.2);
-  @media screen and (min-width: 480px) and (max-width: 1199px) {
+  @media screen and (max-width: 1199px) {
     padding: 93px 15px;
     overflow-y: scroll;
   }
@@ -20,15 +20,15 @@
   opacity: 0;
   pointer-events: none;
 }
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.8);
+@media screen and (min-width: 1200px) {
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.8);
+  }
 }
+
 .modal {
   position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  transition: transform 250ms $transition-timing-function;
+
   max-width: 450px;
   height: 609px;
 
@@ -40,8 +40,12 @@
     0px 1px 3px rgba(0, 0, 0, 0.12);
   @media screen and (min-width: 1200px) {
     position: absolute;
-    width: 450px;
-    height: 609px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms $transition-timing-function;
+    max-width: 528px;
+    height: 581px;
   }
 }
 .feedback {
@@ -190,4 +194,8 @@
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: $second-text-color;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
